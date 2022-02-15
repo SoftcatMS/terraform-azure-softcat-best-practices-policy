@@ -76,35 +76,3 @@ jobs:
         run: | 
           cd tests/basic
           terraform destroy --auto-approve
-
-
-      #### Advanced Tests
-      - name: Terraform Init Advanced
-        id: init_advanced
-        run: | 
-          cd tests/advanced
-          terraform init
-
-      - name: Terraform Plan Advanced
-        id: plan_advanced
-        run: | 
-          cd tests/advanced
-          terraform plan
-          
-      - name: Terraform Apply Advanced
-        id: apply_advanced
-        run: | 
-          cd tests/advanced
-          terraform apply --auto-approve
-
-      - name: Inspec Scan Advanced
-        id: inspec_advanced
-        run: | 
-          inspec exec tests/advanced/azure-inspec-tests --chef-license accept -t azure://
-        continue-on-error: true
-
-      - name: Terraform Destroy Advanced
-        id: destroy_advanced
-        run: | 
-          cd tests/advanced
-          terraform destroy --auto-approve
