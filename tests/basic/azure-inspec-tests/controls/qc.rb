@@ -2,12 +2,18 @@
 
 # Test values
 
-resource_group1 = 'rg-test-basic-resources'
-
-
-describe azure_virtual_network(resource_group: resource_group1, name: 'vnet-test-basic') do
+describe azure_policy_definition(name: 'AuditSoftcatTag_SoftcatManaged') do
   it { should exist }
-  its('location')  { should eq 'uksouth' }
-  its('address_space') { should eq ["10.1.0.0/16"] }
-  its('subnets') { should eq ["subnet1"] }
+end
+
+describe azure_policy_definition(name: 'AuditSoftcatTagOnResourceGroup_SoftcatManaged') do
+  it { should exist }
+end
+
+describe azure_policy_definition(name: 'AuditSoftcatTag_SoftcatMonitored') do
+  it { should exist }
+end
+
+describe azure_policy_definition(name: 'AuditSoftcatTagOnResourceGroup_SoftcatMonitored') do
+  it { should exist }
 end
