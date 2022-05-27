@@ -16,7 +16,7 @@ METADATA
     parameter_values     = <<PARAMETERS
     {
     	"tagName": {
-    		"value": "SoftcatManaged"
+    		"value": "softcat_managed_type"
     	}
     }
 PARAMETERS
@@ -28,7 +28,7 @@ PARAMETERS
     parameter_values     = <<PARAMETERS
     {
     	"tagName": {
-    		"value": "SoftcatManaged"
+    		"value": "softcat_environment"
     	}
     }
 PARAMETERS
@@ -41,7 +41,7 @@ PARAMETERS
     parameter_values     = <<PARAMETERS
     {
     	"tagName": {
-    		"value": "SoftcatMonitored"
+    		"value": "softcat_build_type"
     	}
     }
 PARAMETERS
